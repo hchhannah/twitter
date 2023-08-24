@@ -1,0 +1,24 @@
+
+@mixin hnpx($n)
+    .h#{$n}px
+        height: #{$n}px
+@mixin wnpx($n)
+    .w#{$n}px
+        width: #{$n}px
+@mixin fs-npx($n)
+    .fs-#{$n}px
+        font-size: #{$n}px
+@mixin bgc($name, $color)
+    .#{$name}
+        background-color: $color
+@mixin color($name, $color)
+    .#{$name}
+        color: $color
+
+@mixin hover($name,$content)
+    .#{$name}:hover
+        &::after
+            content: $content
+            display: flex
+            flex-direction: column
+            text-align: center
